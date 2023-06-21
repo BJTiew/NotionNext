@@ -1995,18 +1995,26 @@ thead, tbody tr {
     display: none;
 }
 
+.code-toolbar .toolbar{
+    display: none;
+}
+
+.code-toolbar .pre-mac{
+    display: none;
+}
 
 pre[class*="language-mermaid"] {
-    @apply bg-gray-50 dark:bg-gray-200 !important;
+    background-color: transparent !important;
 }
 
 /* mermaid 原文隐藏 */
 code.language-mermaid {
-    display:none
+    display:none;
 }
 
+
 .code-toolbar{
-  @apply w-full shadow-md;
+  @apply w-full;
 }
 
 .mermaid > svg {

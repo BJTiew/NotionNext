@@ -2061,7 +2061,8 @@ code.language-mermaid {
     padding: 0.5em 1em;
     margin: 6px 6px 6px 0;
     font-size: 0.9em;
-    width: 100px; /* Set a fixed width */
+    font-weight: bold;
+    width: 120px; /* Set a fixed width */
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;

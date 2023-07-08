@@ -2004,17 +2004,16 @@ thead, tbody tr {
 }
 
 pre[class*="language-mermaid"] {
-    background-color: transparent !important;
+    @apply bg-gray-50 dark:bg-gray-200 !important;
 }
 
 /* mermaid 原文隐藏 */
 code.language-mermaid {
-    display:none;
+    display:none
 }
 
-
 .code-toolbar{
-  @apply w-full;
+  @apply w-full shadow-md;
 }
 
 .mermaid > svg {

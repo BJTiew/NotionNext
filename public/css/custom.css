@@ -4,7 +4,8 @@
     opacity: .04;
 }
 
-/* my css start here */
+
+/* quote-link to button */
 
  .notion-quote:has(.notion-link){
     text-align: center;
@@ -44,4 +45,21 @@
     background-color: #e0e0e0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
+  }
+
+
+/* quote-quote to boxshape */
+
+ .notion-quote .notion-quote {
+    margin-block: -1.75em;
+    max-block-size: 0em;
+    border-color: transparent;
+    border-left-color: transparent;
+    background-color: transparent;
+  }
+
+ .notion-quote:has(.notion-quote) {
+    border-left-color: transparent;
+    border-left: 0px solid;
+    padding: .9em .9em;
   }

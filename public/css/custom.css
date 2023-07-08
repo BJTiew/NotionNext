@@ -63,3 +63,20 @@
     border-left: 0px solid;
     padding: .9em .9em;
   }
+
+
+/* mermaid related css */
+
+pre[class*="language-mermaid"] {
+    background-color: transparent !important;
+}
+
+/* mermaid 原文隐藏 */
+
+.code-toolbar>.toolbar {
+    display:none;
+}
+
+.pre-mac {
+    display: none;
+}

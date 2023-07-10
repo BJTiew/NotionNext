@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Prism from 'prismjs'
 // 所有语言的prismjs 使用autoloader引入
 // import 'prismjs/plugins/autoloader/prism-autoloader'
@@ -11,29 +11,28 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 // mermaid图
 import BLOG from '@/blog.config'
-import { isBrowser, loadExternalResource } from '@/lib/utils'
+import { loadExternalResource } from '@/lib/utils'
+import { useRouter } from 'next/navigation'
 
 /**
  * @author https://github.com/txs/
  * @returns
  */
 const PrismMac = () => {
+  const router = useRouter()
   useEffect(() => {
-    if (isBrowser()) {
-      if (BLOG.CODE_MAC_BAR) {
-        loadExternalResource('/css/prism-mac-style.css', 'css')
-      }
-      loadExternalResource(BLOG.PRISM_THEME_PATH, 'css')
-      loadExternalResource(BLOG.PRISM_JS_AUTO_LOADER, 'js').then((url) => {
-        // console.log('渲染公式图表')
-        if (window?.Prism?.plugins?.autoloader) {
-          window.Prism.plugins.autoloader.languages_path = BLOG.PRISM_JS_PATH
-        }
-        renderPrismMac()
-        renderMermaid()
-      })
+    if (JSON.parse(BLOG.CODE_MAC_BAR)) {
+      loadExternalResource('/css/prism-mac-style.css', 'css')
     }
-  }, [])
+    loadExternalResource(BLOG.PRISM_THEME_PATH, 'css')
+    loadExternalResource(BLOG.PRISM_JS_AUTO_LOADER, 'js').then((url) => {
+      if (window?.Prism?.plugins?.autoloader) {
+        window.Prism.plugins.autoloader.languages_path = BLOG.PRISM_JS_PATH
+      }
+      renderPrismMac()
+      renderMermaid()
+    })
+  }, [router])
   return <></>
 }
 
@@ -61,16 +60,19 @@ const renderMermaid = async() => {
             }
           }
           if (needLoad) {
-            const url = await loadExternalResource(BLOG.MERMAID_CDN, 'js')
-            const mermaid = window.mermaid
-            console.log('mermaid加载成功', url, mermaid)
-            mermaid.contentLoaded()
+            loadExternalResource(BLOG.MERMAID_CDN, 'js').then(url => {
+              // console.log('mermaid加载成功', url, mermaid)
+              const mermaid = window.mermaid
+              mermaid.contentLoaded()
+            })
           }
         }
       }
     }
   })
-  observer.observe(document.querySelector('#container'), { attributes: true, subtree: true })
+  if (document.querySelector('#container-inner')) {
+    observer.observe(document.querySelector('#container-inner'), { attributes: true, subtree: true })
+  }
 }
 
 function renderPrismMac() {

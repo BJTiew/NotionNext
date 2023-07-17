@@ -290,7 +290,7 @@ const BLOG = {
       process.env.NEXT_PUBLIC_SEO_GOOGLE_SITE_VERIFICATION || '', // Remove the value or replace it with your own google site verification code
 
   
-  SEO_BAIDU_SITE_VERIFICATION: process.env.SEO_BAIDU_SITE_VERIFICATION || '', // 百度站长平台的站点验证
+  SEO_BAIDU_SITE_VERIFICATION: process.env.SEO_BAIDU_SITE_VERIFICATION || 'codeva-SKVungiutH', // 百度站长平台的站点验证
   
   // <---- 站点统计
 

@@ -20,7 +20,8 @@ const Page = props => {
     description: siteInfo?.description,
     image: siteInfo?.pageCover,
     slug: 'page/' + props.page,
-    type: 'website'
+    type: 'website',
+    baidu-site-verification: 'codeva-SKVungiutH'
   }
 
   props = { ...props, meta }

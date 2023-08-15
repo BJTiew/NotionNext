@@ -90,3 +90,12 @@ pre[class*="language-mermaid"] {
 #banner-cover {
   z-index: 2;
 }
+
+
+/* hide for gallery in daxiyanwo */
+.notion-block-de06b78ad7eb4a6db97e1e89ce969fdd .notion-collection-card-property:first-child {
+    display:none;
+}
+.notion-block-de06b78ad7eb4a6db97e1e89ce969fdd {
+    border-top: none;
+}

@@ -330,6 +330,9 @@ const BLOG = {
   SEO_BAIDU_SITE_VERIFICATION:
         process.env.NEXT_PUBLIC_SEO_BAIDU_SITE_VERIFICATION || '', // Remove the value or replace it with your own google site verification code
 
+  CLARITY_TRACKING_ID: process.env.NEXT_PUBLIC_CLARITY_TRACKING_ID || '', // microsoft clarify
+
+  
   // <---- 站点统计
 
   // START---->营收相关

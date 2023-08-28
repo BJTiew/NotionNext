@@ -1,5 +1,6 @@
 import BLOG from '@/blog.config'
 import Head from 'next/head'
+import ClarityScript from './ClarityScript'
 
 const CommonHead = ({ meta, children }) => {
   let url = BLOG?.PATH?.length ? `${BLOG.LINK}/${BLOG.SUB_PATH}` : BLOG.LINK

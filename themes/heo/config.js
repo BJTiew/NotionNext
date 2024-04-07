@@ -5,9 +5,9 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到大熙燕窝', url: 'https://www.daxiyanwo.com' },
-    { title: '点击查询大熙燕窝旗下优质燕窝产品', url: 'https://www.daxiyanwo.com/products' },
-    { title: '了解大熙燕窝的燕窝挑毛加工生产线', url: 'https://www.daxiyanwo.com/production' },
+    { title: '大熙燕窝欢迎您', url: 'https://www.daxiyanwo.com' },
+    { title: '查看优质燕窝', url: 'https://www.daxiyanwo.com/products' },
+    { title: '了解大熙燕窝生产线', url: 'https://www.daxiyanwo.com/production' },
     { title: '联系大熙，咨询合作', url: 'https://www.daxiyanwo.com/about' }
   ],
 
